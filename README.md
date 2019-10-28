@@ -7,7 +7,7 @@
 | Projets            | Ports |
 |--------------------|-------|
 | frontend           | 8080  |
-| backtend           | 8081  |
+| vacancies-service  | 8081  |
 | cars-service       | 8082  |
 | customers-service  | 8083  |
 | rentals-service    | 8084  |

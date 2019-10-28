@@ -1,12 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3ef053a-9a0d-443f-b74f-6e25d6c08ea1" name="Default Changelist" comment="" />
+    <list default="true" id="b3ef053a-9a0d-443f-b74f-6e25d6c08ea1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vacancies-service/src/test/java/com/vacanciesservice/VacanciesServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/vacancies-service/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/vacancies-service/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/vacancies-service/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/vacancies-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/vacancies-service/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/vacancies-service/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vacancies-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/backend/BackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/vacancies-service/src/main/java/com/vacanciesservice/VacanciesServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/vacancies-service/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/backend/target/" />
     <ignored path="$PROJECT_DIR$/cars-service/target/" />
     <ignored path="$PROJECT_DIR$/frontend/target/" />
     <ignored path="$PROJECT_DIR$/customers-service/target/" />
     <ignored path="$PROJECT_DIR$/rentals-service/target/" />
+    <ignored path="$PROJECT_DIR$/vacancies-service/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,16 +31,27 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rentals-service/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="19">
               <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="171">
+                <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -40,6 +68,7 @@
         <option value="$PROJECT_DIR$/cars-service/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/customers-service/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/rentals-service/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -48,13 +77,6 @@
       <expand />
       <select />
     </treeState>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-      </list>
-    </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1912" />
@@ -68,9 +90,104 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="MicroserviceCarJavaAvance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MicroserviceCarJavaAvance" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MicroserviceCarJavaAvance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MicroserviceCarJavaAvance" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MicroserviceCarJavaAvance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MicroserviceCarJavaAvance" type="462c0819:PsiDirectoryNode" />
+              <item name="rentals-service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MicroserviceCarJavaAvance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MicroserviceCarJavaAvance" type="462c0819:PsiDirectoryNode" />
+              <item name="rentals-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MicroserviceCarJavaAvance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MicroserviceCarJavaAvance" type="462c0819:PsiDirectoryNode" />
+              <item name="rentals-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MicroserviceCarJavaAvance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MicroserviceCarJavaAvance" type="462c0819:PsiDirectoryNode" />
+              <item name="rentals-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MicroserviceCarJavaAvance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MicroserviceCarJavaAvance" type="462c0819:PsiDirectoryNode" />
+              <item name="rentals-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MicroserviceCarJavaAvance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MicroserviceCarJavaAvance" type="462c0819:PsiDirectoryNode" />
+              <item name="vacancies-service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MicroserviceCarJavaAvance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MicroserviceCarJavaAvance" type="462c0819:PsiDirectoryNode" />
+              <item name="vacancies-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MicroserviceCarJavaAvance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MicroserviceCarJavaAvance" type="462c0819:PsiDirectoryNode" />
+              <item name="vacancies-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MicroserviceCarJavaAvance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MicroserviceCarJavaAvance" type="462c0819:PsiDirectoryNode" />
+              <item name="vacancies-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MicroserviceCarJavaAvance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MicroserviceCarJavaAvance" type="462c0819:PsiDirectoryNode" />
+              <item name="vacancies-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MicroserviceCarJavaAvance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MicroserviceCarJavaAvance" type="462c0819:PsiDirectoryNode" />
+              <item name="vacancies-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="vacanciesservice" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -78,9 +195,10 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SpringBoot-frontend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -101,11 +219,11 @@
   </component>
   <component name="RunManager" selected="Compound.CarRentalApp">
     <configuration name="CarRentalApp" type="CompoundRunConfigurationType">
-      <toRun name="CustomersServiceApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="RentalsServiceApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="VacanciesServiceApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="FrontendApplication" type="SpringBootApplicationConfigurationType" />
-      <toRun name="BackendApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="CarsServiceApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="CustomersServiceApplication" type="SpringBootApplicationConfigurationType" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="CompoundRunConfigurationType">
@@ -115,14 +233,6 @@
       <toRun name="BackendApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="CarsServiceApplication" type="SpringBootApplicationConfigurationType" />
       <method v="2" />
-    </configuration>
-    <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
-      <module name="backend" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.backend.BackendApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <configuration name="CarsServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="cars-service" />
@@ -156,9 +266,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="VacanciesServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
+      <module name="backend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.vacanciesservice.VacanciesServiceApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Compound.CarRentalApp" />
-      <item itemvalue="Spring Boot.BackendApplication" />
+      <item itemvalue="Spring Boot.VacanciesServiceApplication" />
       <item itemvalue="Spring Boot.CarsServiceApplication" />
       <item itemvalue="Spring Boot.CustomersServiceApplication" />
       <item itemvalue="Spring Boot.FrontendApplication" />
@@ -178,18 +296,20 @@
       <workItem from="1572010308019" duration="132000" />
       <workItem from="1572010592316" duration="97000" />
       <workItem from="1572010834396" duration="1100000" />
+      <workItem from="1572014809209" duration="781000" />
+      <workItem from="1572256640147" duration="391000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1329000" />
+    <option name="totallyTimeSpent" value="2501000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Web" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24973205" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.2561629" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
@@ -217,7 +337,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Maven" order="6" weight="0.329582" />
+      <window_info anchor="right" id="Maven" order="6" visible="true" weight="0.329582" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Database" order="9" />
@@ -227,7 +347,7 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/backend/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/vacancies-service/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret lean-forward="true" />
@@ -252,6 +372,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="171">
+            <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
