@@ -5,6 +5,7 @@ import com.rentalsservice.repositories.RentalsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.List;
 
 @RequestMapping("/rentals")
@@ -42,5 +43,11 @@ public class RentalsController {
     public void deleteRental(@PathVariable int id) {
 
         rentalsRepository.deleteById(id);
+    }
+
+    @GetMapping("/vacant-cars")
+    public Object[] getBookedCars(@RequestBody Date[] period) {
+
+        return rentalsRepository.getBookedCarIds(period[0], period[1]);
     }
 }
