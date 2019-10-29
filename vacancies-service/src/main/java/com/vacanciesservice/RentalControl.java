@@ -9,10 +9,7 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 @RestController
 public class RentalControl {
@@ -20,25 +17,15 @@ public class RentalControl {
     RestTemplate restTemplate = new RestTemplate();
 
     @PostMapping("/AddVacanciesCars")
-    public void AddVacanciesCars(@RequestBody Date[] datesBody) {
+    public int[] AddVacanciesCars(@RequestBody Date[] datesBody) {
 
         ArrayList<Cars> VacanciesCars = new ArrayList<>();
 
-        System.out.println(datesBody[0]);
-        System.out.println(datesBody[1]);
-        System.out.println(datesBody);
-        System.out.println(datesBody.getClass());
-//        HttpHeaders entete = new HttpHeaders();
-//        entete.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
-//
-//        MultiValueMap<String, Date[]> map = new LinkedMultiValueMap<>();
-//        map.add("period", datesBody);
-//
-//        HttpEntity<MultiValueMap<String, Date[]>> requeteHttp = new HttpEntity<MultiValueMap<String, Date[]>>(map, entete);
-//        System.out.println(restTemplate.getForObject("http://localhost:8084/rentals/vacant-cars", int[].class, datesBody));
+        HttpEntity<Date[]> entity = new HttpEntity<Date[]>(datesBody);
 
-        int[] ResponseIdNoVacanciesCars = restTemplate.getForEntity("http://localhost:8084/rentals/vacant-cars", int[].class, datesBody);
+        int[] ResponseIdNoVacanciesCars = restTemplate.postForEntity("http://localhost:8084/rentals/vacant-cars", entity, int[].class).getBody();
 
+        return ResponseIdNoVacanciesCars;
 //        Cars[] ResponseCars =  restTemplate.getForEntity("http://localhost:8082/", Cars[].class).getBody();
 //
 //        for (Cars car : ResponseCars) {
