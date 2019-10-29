@@ -1,5 +1,6 @@
 package com.vacanciesservice;
 
+import com.vacanciesservice.model.AddVacanciesCarsRequestBody;
 import com.vacanciesservice.model.Cars;
 import com.vacanciesservice.model.Customers;
 import javafx.scene.control.Tab;
@@ -18,7 +19,9 @@ public class RentalControl {
     RestTemplate restTemplate = new RestTemplate();
 
     @PostMapping("/AddVacanciesCars/{idClient}")
-    public Cars[] AddVacanciesCars(@RequestBody Date[] datesBody, @PathVariable int idClient) {
+    public Cars[] AddVacanciesCars(@RequestBody AddVacanciesCarsRequestBody requestBoby, @PathVariable int idClient) {
+        Date[] datesBody = requestBoby.getDatesBody();
+        int previewKm = requestBoby.getPreviewKm();
 
         ArrayList<Cars> VacanciesCars = new ArrayList<>();
         Cars[] ResponseCars =  restTemplate.getForEntity("http://localhost:8082/carList", Cars[].class).getBody();
@@ -36,6 +39,7 @@ public class RentalControl {
             for (Cars car : ResponseCars) {
                 for (int id : ResponseIdNoVacanciesCars){
                     if(id == car.getId() && car.getHorse_power() < 8) {
+                        car.setPreviewPrice(previewKm * car.getKm_price() + car.getReservation_price());
                         VacanciesCars.add(car);
                     }
                 }
@@ -44,6 +48,7 @@ public class RentalControl {
             for (Cars car : ResponseCars) {
                 for (int id : ResponseIdNoVacanciesCars){
                     if(id == car.getId() && car.getHorse_power() < 13) {
+                        car.setPreviewPrice(previewKm * car.getKm_price() + car.getReservation_price());
                         VacanciesCars.add(car);
                     }
                 }
@@ -52,6 +57,7 @@ public class RentalControl {
             for (Cars car : ResponseCars) {
                 for (int id : ResponseIdNoVacanciesCars){
                     if(id == car.getId()) {
+                        car.setPreviewPrice(previewKm * car.getKm_price() + car.getReservation_price());
                         VacanciesCars.add(car);
                     }
                 }

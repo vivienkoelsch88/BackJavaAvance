@@ -8,6 +8,7 @@ public class Cars {
     private int reservation_price;
     private int km_price;
     private int horse_power;
+    private int previewPrice;
 
     public Cars(){
 
@@ -67,6 +68,14 @@ public class Cars {
 
     public void setHorse_power(int horse_power) {
         this.horse_power = horse_power;
+    }
+
+    public int getPreviewPrice() {
+        return previewPrice;
+    }
+
+    public void setPreviewPrice(int previewPrice) {
+        this.previewPrice = previewPrice;
     }
 
     @Override
