@@ -46,7 +46,8 @@ public class RentalsController {
     }
 
     @PostMapping("/vacant-cars")
-    public int[] getBookedCars(@RequestBody Date[] period) {
+    public Object[] getBookedCars(@RequestBody Date[] period) {
+
         return rentalsRepository.getBookedCarIds(period[0], period[1]);
     }
 }
