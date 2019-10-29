@@ -1,6 +1,8 @@
 package com.vacanciesservice;
 
+import com.vacanciesservice.model.AddVacanciesCarsRequestBody;
 import com.vacanciesservice.model.Cars;
+import com.vacanciesservice.model.Customers;
 import javafx.scene.control.Tab;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
@@ -16,8 +18,10 @@ public class RentalControl {
 
     RestTemplate restTemplate = new RestTemplate();
 
-    @PostMapping("/AddVacanciesCars")
-    public Cars[] AddVacanciesCars(@RequestBody Date[] datesBody) {
+    @PostMapping("/AddVacanciesCars/{idClient}")
+    public Cars[] AddVacanciesCars(@RequestBody AddVacanciesCarsRequestBody requestBoby, @PathVariable int idClient) {
+        Date[] datesBody = requestBoby.getDatesBody();
+        int previewKm = requestBoby.getPreviewKm();
 
         ArrayList<Cars> VacanciesCars = new ArrayList<>();
         Cars[] ResponseCars =  restTemplate.getForEntity("http://localhost:8082/carList", Cars[].class).getBody();
@@ -26,18 +30,56 @@ public class RentalControl {
 
         int[] ResponseIdNoVacanciesCars = restTemplate.postForEntity("http://localhost:8084/rentals/vacant-cars", entity, int[].class).getBody();
 
-        for (Cars car : ResponseCars) {
-            for (int id : ResponseIdNoVacanciesCars){
-                if(id == car.getId()) {
-                    VacanciesCars.add(car);
+        Customers customers = restTemplate.getForEntity("http://localhost:8083/client/" + idClient, Customers.class).getBody();
+        int CustomerAge = getYears(customers.getBirth_date());
+        System.out.println(CustomerAge);
+        if(CustomerAge < 18){
+            return null;
+        } else if(CustomerAge < 21){
+            for (Cars car : ResponseCars) {
+                for (int id : ResponseIdNoVacanciesCars){
+                    if(id == car.getId() && car.getHorse_power() < 8) {
+                        car.setPreviewPrice(previewKm * car.getKm_price() + car.getReservation_price());
+                        VacanciesCars.add(car);
+                    }
+                }
+            }
+        }else if(CustomerAge < 25){
+            for (Cars car : ResponseCars) {
+                for (int id : ResponseIdNoVacanciesCars){
+                    if(id == car.getId() && car.getHorse_power() < 13) {
+                        car.setPreviewPrice(previewKm * car.getKm_price() + car.getReservation_price());
+                        VacanciesCars.add(car);
+                    }
+                }
+            }
+        } else {
+            for (Cars car : ResponseCars) {
+                for (int id : ResponseIdNoVacanciesCars){
+                    if(id == car.getId()) {
+                        car.setPreviewPrice(previewKm * car.getKm_price() + car.getReservation_price());
+                        VacanciesCars.add(car);
+                    }
                 }
             }
         }
+        Cars[] carsForReturn = new Cars[VacanciesCars.size()];
+        return VacanciesCars.toArray(carsForReturn);
 
-        //-----------------------------------------------------------------
-        return ResponseCars;
-//-----------------------------------------------------------------
     }
 
+    public static int getYears(Date d)
+    {
+        Calendar curr = Calendar.getInstance();
+        Calendar birth = Calendar.getInstance();
+        birth.setTime(d);
+        int yeardiff = curr.get(Calendar.YEAR) - birth.get(Calendar.YEAR);
+        curr.add(Calendar.YEAR,-yeardiff);
+        if(birth.after(curr))
+        {
+            yeardiff = yeardiff - 1;
+        }
+        return yeardiff;
+    }
 
 }
