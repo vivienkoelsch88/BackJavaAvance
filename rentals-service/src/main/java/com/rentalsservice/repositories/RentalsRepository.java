@@ -13,5 +13,5 @@ public interface RentalsRepository extends JpaRepository<Rental, Integer> {
 
     @Query(value = "SELECT car_id from rental WHERE ?1 < end_date AND ?2 >= start_date",
             nativeQuery = true)
-    Object[] getBookedCarIds(Date start, Date end);
+    int[] getBookedCarIds(Date start, Date end);
 }
