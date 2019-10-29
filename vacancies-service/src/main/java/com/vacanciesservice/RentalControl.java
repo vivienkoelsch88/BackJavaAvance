@@ -17,22 +17,26 @@ public class RentalControl {
     RestTemplate restTemplate = new RestTemplate();
 
     @PostMapping("/AddVacanciesCars")
-    public int[] AddVacanciesCars(@RequestBody Date[] datesBody) {
+    public Cars[] AddVacanciesCars(@RequestBody Date[] datesBody) {
 
         ArrayList<Cars> VacanciesCars = new ArrayList<>();
+        Cars[] ResponseCars =  restTemplate.getForEntity("http://localhost:8082/carList", Cars[].class).getBody();
 
         HttpEntity<Date[]> entity = new HttpEntity<Date[]>(datesBody);
 
         int[] ResponseIdNoVacanciesCars = restTemplate.postForEntity("http://localhost:8084/rentals/vacant-cars", entity, int[].class).getBody();
 
-        return ResponseIdNoVacanciesCars;
-//        Cars[] ResponseCars =  restTemplate.getForEntity("http://localhost:8082/", Cars[].class).getBody();
-//
-//        for (Cars car : ResponseCars) {
-//            if(ResponseIdNoVacanciesCars.toString().contains(car.getId() + "")){
-//                VacanciesCars.add(car);
-//            }
-//        }
+        for (Cars car : ResponseCars) {
+            for (int id : ResponseIdNoVacanciesCars){
+                if(id == car.getId()) {
+                    VacanciesCars.add(car);
+                }
+            }
+        }
+
+        //-----------------------------------------------------------------
+        return ResponseCars;
+//-----------------------------------------------------------------
     }
 
 
