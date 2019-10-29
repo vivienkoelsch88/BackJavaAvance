@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Rental List</h1>
+<a href="#">New rental</a>
+<br/><br/>
+<div>
+    <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Customer_id</th>
+            <th>Car_id</th>
+            <th>Start_date</th>
+            <th>End_date</th>
+            <th>Total_price</th>
+        </tr>
+        <tr th:each="rental : ${rentals}">
+            <td th:utext="${rental.id}">...</td>
+            <td th:utext="${rental.customer_id}">...</td>
+            <td th:utext="${rental.car_id}">...</td>
+            <td th:utext="${rental.start_date}">...</td>
+            <td th:utext="${rental.end_date}">...</td>
+            <td th:utext="${rental.total_price}">...</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
