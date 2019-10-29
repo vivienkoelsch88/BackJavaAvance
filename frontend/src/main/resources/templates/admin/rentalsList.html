@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -20,11 +20,11 @@
         </tr>
         <tr th:each="rental : ${rentals}">
             <td th:utext="${rental.id}">...</td>
-            <td th:utext="${rental.customer_id}">...</td>
-            <td th:utext="${rental.car_id}">...</td>
-            <td th:utext="${rental.start_date}">...</td>
-            <td th:utext="${rental.end_date}">...</td>
-            <td th:utext="${rental.total_price}">...</td>
+            <td th:utext="${rental.customerId}">...</td>
+            <td th:utext="${rental.carId}">...</td>
+            <td th:utext="${rental.startDate}">...</td>
+            <td th:utext="${rental.endDate}">...</td>
+            <td th:utext="${rental.totalPrice}">...</td>
         </tr>
     </table>
 </div>
