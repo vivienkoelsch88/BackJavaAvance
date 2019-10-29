@@ -2,18 +2,16 @@ package com.vacanciesservice.model;
 
 public class Cars {
     private int id;
-
     private String immatriculation;
-
     private String marque;
-
     private String model;
+    private int reservation_price;
+    private int km_price;
+    private int horse_power;
 
-    private int reservationPrice;
+    public Cars(){
 
-    private int kmPrice;
-
-    private int horsePower;
+    }
 
     public int getId() {
         return id;
@@ -47,27 +45,40 @@ public class Cars {
         this.model = model;
     }
 
-    public int getReservationPrice() {
-        return reservationPrice;
+    public int getReservation_price() {
+        return reservation_price;
     }
 
-    public void setReservationPrice(int reservationPrice) {
-        this.reservationPrice = reservationPrice;
+    public void setReservation_price(int reservation_price) {
+        this.reservation_price = reservation_price;
     }
 
-    public int getKmPrice() {
-        return kmPrice;
+    public int getKm_price() {
+        return km_price;
     }
 
-    public void setKmPrice(int kmPrice) {
-        this.kmPrice = kmPrice;
+    public void setKm_price(int km_price) {
+        this.km_price = km_price;
     }
 
-    public int getHorsePower() {
-        return horsePower;
+    public int getHorse_power() {
+        return horse_power;
     }
 
-    public void setHorsePower(int horsePower) {
-        this.horsePower = horsePower;
+    public void setHorse_power(int horse_power) {
+        this.horse_power = horse_power;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "id=" + id +
+                ", immatriculation='" + immatriculation + '\'' +
+                ", marque='" + marque + '\'' +
+                ", model='" + model + '\'' +
+                ", reservation_price=" + reservation_price +
+                ", km_price=" + km_price +
+                ", horse_power=" + horse_power +
+                '}';
     }
 }
