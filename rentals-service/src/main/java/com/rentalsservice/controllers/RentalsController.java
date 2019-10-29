@@ -45,7 +45,7 @@ public class RentalsController {
         rentalsRepository.deleteById(id);
     }
 
-    @GetMapping("/vacant-cars")
+    @PostMapping("/vacant-cars")
     public Object[] getBookedCars(@RequestBody Date[] period) {
 
         return rentalsRepository.getBookedCarIds(period[0], period[1]);
