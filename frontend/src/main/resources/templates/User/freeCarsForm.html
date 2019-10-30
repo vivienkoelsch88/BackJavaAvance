@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="#" th:action="@{/freeCarsList}" th:object="${listCarsForm}" method="post">
+    <tr>
+        <td>ID User</td>
+        <td><input type="number" th:field="*{idUser}" /></td>
+
+        <td>ID User</td>
+        <td><input type="date" th:field="*{dateDebut}"  /></td>
+
+        <!--th:value="${#dates.format(bookingEntry.datefrom, 'dd-MM-yyyy HH:mm')}"-->
+        <td>ID User</td>
+        <td><input type="date" th:field="*{dateFin}"  /></td>
+
+        <td>KM prévus</td>
+        <td><input type="number" th:field="*{previewKm}" /></td>
+
+    </tr>
+    <br>
+    <button style="margin-top:10px" class="btn btn-default" type="submit">Voir les voitures disponibles</button>
+
+</form>
+
+</body>
+</html>

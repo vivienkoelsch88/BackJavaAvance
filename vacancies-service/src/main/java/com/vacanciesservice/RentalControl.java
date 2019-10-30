@@ -20,6 +20,7 @@ public class RentalControl {
 
     @PostMapping("/AddVacanciesCars/{idClient}")
     public Cars[] AddVacanciesCars(@RequestBody AddVacanciesCarsRequestBody requestBoby, @PathVariable int idClient) {
+
         Date[] datesBody = requestBoby.getDatesBody();
         int previewKm = requestBoby.getPreviewKm();
 
@@ -32,33 +33,40 @@ public class RentalControl {
 
         Customers customers = restTemplate.getForEntity("http://localhost:8083/client/" + idClient, Customers.class).getBody();
         int CustomerAge = getYears(customers.getBirth_date());
-        System.out.println(CustomerAge);
+
         if(CustomerAge < 18){
             return null;
         } else if(CustomerAge < 21){
             for (Cars car : ResponseCars) {
+                if(car.getHorse_power() < 8) {
+                    car.setPreviewPrice(previewKm * car.getKm_price() + car.getReservation_price());
+                    VacanciesCars.add(car);
+                }
                 for (int id : ResponseIdNoVacanciesCars){
-                    if(id == car.getId() && car.getHorse_power() < 8) {
-                        car.setPreviewPrice(previewKm * car.getKm_price() + car.getReservation_price());
-                        VacanciesCars.add(car);
+                    if(id == car.getId()) {
+                        VacanciesCars.remove(car);
                     }
                 }
             }
         }else if(CustomerAge < 25){
             for (Cars car : ResponseCars) {
+                if(car.getHorse_power() < 13) {
+                    car.setPreviewPrice(previewKm * car.getKm_price() + car.getReservation_price());
+                    VacanciesCars.add(car);
+                }
                 for (int id : ResponseIdNoVacanciesCars){
-                    if(id == car.getId() && car.getHorse_power() < 13) {
-                        car.setPreviewPrice(previewKm * car.getKm_price() + car.getReservation_price());
-                        VacanciesCars.add(car);
+                    if(id == car.getId()) {
+                        VacanciesCars.remove(car);
                     }
                 }
             }
         } else {
             for (Cars car : ResponseCars) {
+                car.setPreviewPrice(previewKm * car.getKm_price() + car.getReservation_price());
+                VacanciesCars.add(car);
                 for (int id : ResponseIdNoVacanciesCars){
                     if(id == car.getId()) {
-                        car.setPreviewPrice(previewKm * car.getKm_price() + car.getReservation_price());
-                        VacanciesCars.add(car);
+                        VacanciesCars.remove(car);
                     }
                 }
             }
