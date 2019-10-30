@@ -1,4 +1,4 @@
-package com.vacanciesservice.model;
+package com.frontend.form;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -10,6 +10,11 @@ public class AddVacanciesCarsRequestBody {
     private int previewKm;
 
     public AddVacanciesCarsRequestBody() {
+    }
+
+    public AddVacanciesCarsRequestBody(Date[] datesBody, int previewKm) {
+        this.datesBody = datesBody;
+        this.previewKm = previewKm;
     }
 
     public Date[] getDatesBody() {

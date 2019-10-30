@@ -5,10 +5,12 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Rental List</h1>
-<a href="#">New rental</a>
+<h1>Free cars list</h1>
 <br/><br/>
 <div>
+
+                                 <!--La variable '${dates}' contient un tableau de dates!!-->
+
     <table border="1">
         <tr>
             <th>immatriculation</th>
@@ -17,9 +19,9 @@
             <th>reservation_price</th>
             <th>km_price</th>
             <th>horse_power</th>
-            <th>previewPrice</th>
+            <th>Total_price</th>
         </tr>
-        <tr th:each="rental : ${rentals}">
+        <tr th:each="rental : ${carList}">
             <td th:utext="${rental.immatriculation}">...</td>
             <td th:utext="${rental.marque}">...</td>
             <td th:utext="${rental.model}">...</td>
@@ -29,6 +31,7 @@
             <td th:utext="${rental.previewPrice}">...</td>
         </tr>
     </table>
+
 </div>
 </body>
 </html>
