@@ -38,6 +38,8 @@ public class FreeCarsController {
         Date[] dates = {form.getDateDebut(), form.getDateFin()};
         AddVacanciesCarsRequestBody request = new AddVacanciesCarsRequestBody(dates, form.getPreviewKm());
 
+        model.addAttribute("dates", dates);
+
         Cars[] carList = restTemplate.postForEntity("http://localhost:8081/AddVacanciesCars/" + form.getIdUser(), request, Cars[].class).getBody();
 
         model.addAttribute("carList", carList);
