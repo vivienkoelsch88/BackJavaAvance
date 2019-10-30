@@ -1,32 +1,35 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Locations</title>
 </head>
 <body>
 <h1>Rental List</h1>
-<a href="#">New rental</a>
+<a th:href="@{/admin/createRental}">New rental</a>
 <br/><br/>
 <div>
     <table border="1">
         <tr>
-            <th>immatriculation</th>
-            <th>marque</th>
-            <th>model</th>
-            <th>reservation_price</th>
-            <th>km_price</th>
-            <th>horse_power</th>
-            <th>previewPrice</th>
+            <th>Id</th>
+            <th>Client</th>
+            <th>Voiture</th>
+            <th>Début de location</th>
+            <th>Fin de location</th>
+            <th>Prix total</th>
+            <th>Suppr.</th>
         </tr>
         <tr th:each="rental : ${rentals}">
-            <td th:utext="${rental.immatriculation}">...</td>
-            <td th:utext="${rental.marque}">...</td>
-            <td th:utext="${rental.model}">...</td>
-            <td th:utext="${rental.reservation_price}">...</td>
-            <td th:utext="${rental.km_price}">...</td>
-            <td th:utext="${rental.horse_power}">...</td>
-            <td th:utext="${rental.previewPrice}">...</td>
+            <td th:utext="${rental.id}">...</td>
+            <td th:utext="${rental.customerId}">...</td>
+            <td th:utext="${rental.carId}">...</td>
+            <td th:utext="${rental.startDate}">...</td>
+            <td th:utext="${rental.endDate}">...</td>
+            <td th:utext="${rental.totalPrice}">...</td>
+            <td>
+                <a type="button" th:href="@{/admin/rentals/delete/{id}
+                (id=${rental.id})}">X</a>
+            </td>
         </tr>
     </table>
 </div>
