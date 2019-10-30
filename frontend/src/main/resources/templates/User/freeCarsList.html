@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Free cars list</h1>
+<br/><br/>
+<div>
+
+                                 <!--La variable '${dates}' contient un tableau de dates!!-->
+
+    <table border="1">
+        <tr>
+            <th>immatriculation</th>
+            <th>marque</th>
+            <th>model</th>
+            <th>reservation_price</th>
+            <th>km_price</th>
+            <th>horse_power</th>
+            <th>Total_price</th>
+        </tr>
+        <tr th:each="rental : ${carList}">
+            <td th:utext="${rental.immatriculation}">...</td>
+            <td th:utext="${rental.marque}">...</td>
+            <td th:utext="${rental.model}">...</td>
+            <td th:utext="${rental.reservation_price}">...</td>
+            <td th:utext="${rental.km_price}">...</td>
+            <td th:utext="${rental.horse_power}">...</td>
+            <td th:utext="${rental.previewPrice}">...</td>
+        </tr>
+    </table>
+
+</div>
+</body>
+</html>

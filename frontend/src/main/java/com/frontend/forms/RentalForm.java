@@ -1,31 +1,18 @@
-package com.frontend.models;
+package com.frontend.forms;
 
-import org.springframework.stereotype.Repository;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
-@Repository
-public class Rental {
+public class RentalForm {
 
-    private int id;
     private int customerId;
     private int carId;
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date startDate;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date endDate;
-    private double totalPrice;
-
-    public Rental() {}
-
-    public Rental(int customerId, int carId, Date startDate, Date endDate) {
-        this.customerId = customerId;
-        this.carId = carId;
-        this.startDate = startDate;
-        this.endDate = endDate;
-    }
-
-    public int getId() {
-        return id;
-    }
 
     public int getCustomerId() {
         return customerId;
@@ -57,13 +44,5 @@ public class Rental {
 
     public void setEndDate(Date endDate) {
         this.endDate = endDate;
-    }
-
-    public double getTotalPrice() {
-        return totalPrice;
-    }
-
-    public void setTotalPrice(double totalPrice) {
-        this.totalPrice = totalPrice;
     }
 }
