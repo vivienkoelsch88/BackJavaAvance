@@ -12,11 +12,12 @@
     <table border="1">
         <tr>
             <th>Id</th>
-            <th>Customer_id</th>
-            <th>Car_id</th>
-            <th>Start_date</th>
-            <th>End_date</th>
-            <th>Total_price</th>
+            <th>Client</th>
+            <th>Voiture</th>
+            <th>Début de location</th>
+            <th>Fin de location</th>
+            <th>Prix total</th>
+            <th>Suppr.</th>
         </tr>
         <tr th:each="rental : ${rentals}">
             <td th:utext="${rental.id}">...</td>
@@ -25,6 +26,10 @@
             <td th:utext="${rental.startDate}">...</td>
             <td th:utext="${rental.endDate}">...</td>
             <td th:utext="${rental.totalPrice}">...</td>
+            <td>
+                <a type="button" th:href="@{/admin/rentals/delete/{id}
+                (id=${rental.id})}">X</a>
+            </td>
         </tr>
     </table>
 </div>
