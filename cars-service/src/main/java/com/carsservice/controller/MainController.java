@@ -1,6 +1,7 @@
 package com.carsservice.controller;
 
 import com.carsservice.interfacee.CarDao;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
@@ -28,6 +29,7 @@ public class MainController {
         return carDao.findById(id);
     }
 
+    @ApiOperation(value = "register a new car")
     @PostMapping(value = "/list")
     public Car save(@RequestBody Car car) {
         return carDao.save(car);
