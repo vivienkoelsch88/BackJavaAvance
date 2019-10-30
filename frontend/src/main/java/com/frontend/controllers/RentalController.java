@@ -17,13 +17,13 @@ public class RentalController {
     @Autowired
     private RestTemplate restTemplate;
 
-    @Value("${rentals-service.url}")
-    private String rentalsUrl;
+    @Value("${vacation-service.url}")
+    private String vacationUrl;
 
     @GetMapping("/admin/rentals")
     public String listRentals(Model model) {
 
-        List<Rental> rentals = restTemplate.getForObject(rentalsUrl + "/", List.class);
+        List<Rental> rentals = restTemplate.getForObject(vacationUrl + "/", List.class);
         System.out.println(rentals);
 
         model.addAttribute("rentals", rentals);
