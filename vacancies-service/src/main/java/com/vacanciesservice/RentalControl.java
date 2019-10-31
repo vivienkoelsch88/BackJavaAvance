@@ -16,7 +16,7 @@ import java.util.*;
 @RestController
 public class RentalControl {
 
-    RestTemplate restTemplate = new RestTemplate();
+    private RestTemplate restTemplate = new RestTemplate();
 
     @PostMapping("/AddVacanciesCars/{idClient}")
     public Cars[] AddVacanciesCars(@RequestBody AddVacanciesCarsRequestBody requestBoby, @PathVariable int idClient) {

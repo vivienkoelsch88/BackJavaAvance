@@ -32,4 +32,5 @@ public class AddVacanciesCarsRequestBody {
     public void setPreviewKm(int previewKm) {
         this.previewKm = previewKm;
     }
+
 }
