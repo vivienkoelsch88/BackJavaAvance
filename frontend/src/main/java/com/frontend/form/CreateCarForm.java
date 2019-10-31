@@ -8,8 +8,9 @@ public class CreateCarForm {
     private String marque;
     private String model;
     private int reservation_price;
+    private int previewPrice;
 
-    public CreateCarForm(int id, int horse_power, String immatriculation, int km_price, String marque, String model, int reservation_price) {
+    public CreateCarForm(int id, int horse_power, String immatriculation, int km_price, String marque, String model, int reservation_price, int previewPrice) {
         this.id = id;
         this.horse_power = horse_power;
         this.immatriculation = immatriculation;
@@ -17,6 +18,7 @@ public class CreateCarForm {
         this.marque = marque;
         this.model = model;
         this.reservation_price = reservation_price;
+        this.previewPrice = previewPrice;
     }
 
     public CreateCarForm() {
@@ -72,6 +74,14 @@ public class CreateCarForm {
 
     public int getReservation_price() {
         return reservation_price;
+    }
+
+    public int getPreviewPrice() {
+        return previewPrice;
+    }
+
+    public void setPreviewPrice(int previewPrice) {
+        this.previewPrice = previewPrice;
     }
 
     public void setReservation_price(int reservation_price) {

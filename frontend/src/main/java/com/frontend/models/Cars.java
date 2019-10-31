@@ -8,9 +8,19 @@ public class Cars {
     private int reservation_price;
     private int km_price;
     private int horse_power;
-    private int previewPrice;
+
 
     public Cars(){
+
+    }
+
+    public Cars(String immatriculation, String marque, String model, int reservation_price, int km_price, int horse_power) {
+        this.immatriculation = immatriculation;
+        this.marque = marque;
+        this.model = model;
+        this.reservation_price = reservation_price;
+        this.km_price = km_price;
+        this.horse_power = horse_power;
 
     }
 
@@ -68,14 +78,6 @@ public class Cars {
 
     public void setHorse_power(int horse_power) {
         this.horse_power = horse_power;
-    }
-
-    public int getPreviewPrice() {
-        return previewPrice;
-    }
-
-    public void setPreviewPrice(int previewPrice) {
-        this.previewPrice = previewPrice;
     }
 
     @Override

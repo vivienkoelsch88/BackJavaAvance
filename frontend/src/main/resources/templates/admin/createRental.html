@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <div th:replace="bootS :: mybootstrap"></div>
+    <div th:replace="header :: myheader"></div>
+    <title>Locations</title>
+</head>
+
+<body>
+    <form th:action="@{/admin/createRental}"
+        th:object="${rentalForm}" method="POST">
+        <br/>
+        <label for="customerId">Identifiant du client :</label>
+        <input type="number" id="customerId" th:field="*{customerId}"/>
+        <br/>
+        <label for="carsId">Identifaint du véhicule :</label>
+        <input type="number" id="carsId" th:field="*{carId}"/>
+        <br/>
+        <label for="startDate">Identifaint du client :</label>
+        <input type="date" id="startDate" th:field="*{startDate}"/>
+        <br/>
+        <label for="endDate">Identifaint du client :</label>
+        <input type="date" id="endDate" th:field="*{endDate}"/>
+        <br/>
+        <input type="submit" value="Ajouter">
+    </form>
+</body>
+</html>

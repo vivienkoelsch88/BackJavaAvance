@@ -1,10 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Create Car</title>
 </head>
 <body>
+<form action="#" th:action="@{/createCarsForm}" th:object="${form}" method="post">
+    <tr>
+        <td>immatriculation</td>
+        <td><input type="text" th:field="*{immatriculation}" /></td>
+
+        <td>marque</td>
+        <td><input type="text" th:field="*{marque}"  /></td>
+
+         <td>model</td>
+        <td><input type="text" th:field="*{model}"  /></td>
+
+        <td>reservation_price</td>
+        <td><input type="number" th:field="*{reservation_price}" /></td>
+
+        <td>km_price</td>
+        <td><input type="number" th:field="*{km_price}" /></td>
+
+        <td>horse_power</td>
+        <td><input type="number" th:field="*{horse_power}" /></td>
+
+    </tr>
+    <br>
+    <button style="margin-top:10px" class="btn btn-default" type="submit">Créer</button>
+
+</form>
 
 </body>
 </html>
